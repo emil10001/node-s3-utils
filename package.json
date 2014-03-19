@@ -10,13 +10,13 @@
     "main": "index",
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/emil10001/node-s3-utils"
     },
     "dependencies": {
         "aws-sdk": "2.0.0-rc4"
     },
     "bugs": {
-        "url": ""
+        "url": "https://github.com/emil10001/node-s3-utils/issues"
     },
     "engines": {"node": "0.10.21"}
 }
