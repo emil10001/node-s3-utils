@@ -1,0 +1,22 @@
+{
+    "name": "s3-utils",
+    "author": "ejohn@feigdev.com",
+    "version": "0.0.1",
+    "private": false,
+    "description": "stuff",
+    "keywords": ["aws", "nodejs", "amazonaws", "node.js", "s3"],
+    "bugs": "ejohn@feigdev.com",
+    "contributors": "ejohn@feigdev.com",
+    "main": "index",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "dependencies": {
+        "aws-sdk": "2.0.0-rc4"
+    },
+    "bugs": {
+        "url": ""
+    },
+    "engines": {"node": "0.10.21"}
+}
