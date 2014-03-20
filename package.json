@@ -1,9 +1,9 @@
 {
     "name": "s3-utils",
     "author": "ejohn@feigdev.com",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "private": false,
-    "description": "stuff",
+    "description": "This is a helper utility library for AWS S3, the main purpose of this library is to generate a URL pair, and to delete media.",
     "keywords": ["aws", "nodejs", "amazonaws", "node.js", "s3"],
     "bugs": "ejohn@feigdev.com",
     "contributors": "ejohn@feigdev.com",
