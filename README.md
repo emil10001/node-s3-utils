@@ -16,6 +16,15 @@ this library is to generate a URL pair.
         }
     */
 
+To get a URL pair for an object that will expire in two weeks, do the following:
+
+    var TWO_WEEKS = 7 * 24 * 60 * 60 * 1000;
+    var expDate = new Date().getTime() + TWO_WEEKS;
+    s3.generateTempUrlPair(expDate, function(urlPair){
+        console.log(urlPair);
+        res.end();
+    });
+
 Deleting media from your S3 bucket:
 
     s3.deleteMedia(key, success);
