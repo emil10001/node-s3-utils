@@ -7,7 +7,9 @@ this library is to generate a URL pair.
 
     var s3Util = require('s3-utils');
     var s3 = new s3Util('your_bucket');
-    var urlPair = s3.generateUrlPair(success);
+    var urlPair = s3.generateUrlPair(function(urlPair){
+        console.log("urlPair", urlPair);
+    });
     /**
         urlPair: {
             s3_key: "key",
@@ -22,7 +24,6 @@ To get a URL pair for an object that will expire in two weeks, do the following:
     var expDate = new Date().getTime() + TWO_WEEKS;
     s3.generateTempUrlPair(expDate, function(urlPair){
         console.log(urlPair);
-        res.end();
     });
 
 To get a list of multiple URL pairs:
@@ -31,7 +32,6 @@ To get a list of multiple URL pairs:
         var expDate = new Date().getTime() + TWO_WEEKS;
         s3.generateListUrlPairs(5, expDate, function(urlPairs){
             console.log(urlPairs);
-            res.end();
         });
 
 Deleting media from your S3 bucket:
