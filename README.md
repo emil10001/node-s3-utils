@@ -25,6 +25,15 @@ To get a URL pair for an object that will expire in two weeks, do the following:
         res.end();
     });
 
+To get a list of multiple URL pairs:
+
+        var TWO_WEEKS = 7 * 24 * 60 * 60 * 1000;
+        var expDate = new Date().getTime() + TWO_WEEKS;
+        s3.generateListUrlPairs(5, expDate, function(urlPairs){
+            console.log(urlPairs);
+            res.end();
+        });
+
 Deleting media from your S3 bucket:
 
     s3.deleteMedia(key, success);
