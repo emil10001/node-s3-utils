@@ -20,15 +20,17 @@ this library is to generate a URL pair.
 
 To get a URL pair for an object that will expire in two weeks, do the following:
 
-    var TWO_WEEKS = 7 * 24 * 60 * 60 * 1000;
+    var TWO_WEEKS = 7 * 24 * 60 * 60;
     var expDate = new Date().getTime() + TWO_WEEKS;
     s3.generateTempUrlPair(expDate, function(urlPair){
         console.log(urlPair);
     });
 
+Note: AWS S3 expects dates to be in seconds, not miliseconds.
+
 To get a list of multiple URL pairs:
 
-        var TWO_WEEKS = 7 * 24 * 60 * 60 * 1000;
+        var TWO_WEEKS = 7 * 24 * 60 * 60;
         var expDate = new Date().getTime() + TWO_WEEKS;
         s3.generateListUrlPairs(5, expDate, function(urlPairs){
             console.log(urlPairs);
