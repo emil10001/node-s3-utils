@@ -1,6 +1,10 @@
 NodeJS S3 Utils
 ==========================
 
+WARNING: This is not a stable package. I have not finalized the API,
+so consider it subject to change. Luckily, it's a very small code-base,
+so you should be able to read it and fork it if necessary.
+
 This is a helper utility library for AWS S3, the main purpose of
 this library is to generate a URL pair.
 
